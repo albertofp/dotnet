@@ -16,11 +16,13 @@ public class Book
     public string ImageUri { get; set; }
    
     [Display(Name = "Preço")]
+    [DisplayFormat(DataFormatString = "{0:C}")]
     public double Price { get; set; }
     
     [Display(Name = "Entrega grátis")]
     public bool FreeDelivery { get; set; }
     
     [DisplayFormat(DataFormatString = "{0:D}")]
+    [Display(Name = "Disponível desde")]
     public DateTime CreationDate { get; set; }
 }

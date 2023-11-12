@@ -109,5 +109,10 @@ public class BookService
                 CreationDate = DateTime.Now
             }
         };
-    } 
+    }
+
+    public Book Get(int id)
+    {
+       return GetAll()?.SingleOrDefault(item => item.Id == id)!;
+    }
 }
