@@ -13,7 +13,7 @@ public class BookService
                 Id = 1,
                 Name = "To Kill a Mockingbird",
                 Author = "Harper Lee",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/81r3FVzGxPL.jpg",
+                ImageUri = "/assets/covers/to_kill_a_mockingbird.jpg",
                 Price = 19.00,
                 FreeDelivery = true,
                 CreationDate = DateTime.Now
@@ -23,7 +23,7 @@ public class BookService
                 Id = 2,
                 Name = "1984",
                 Author = "George Orwell",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/81l8e48eygL.jpg",
+                ImageUri = "/assets/covers/1984.jpg",
                 Price = 22.50,
                 FreeDelivery = false,
                 CreationDate = DateTime.Now
@@ -33,7 +33,7 @@ public class BookService
                 Id = 3,
                 Name = "The Great Gatsby",
                 Author = "F. Scott Fitzgerald",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/71sWLOcdIvL.jpg",
+                ImageUri = "/assets/covers/the_great_gatsby.jpg",
                 Price = 25.99,
                 FreeDelivery = true,
                 CreationDate = DateTime.Now
@@ -43,7 +43,7 @@ public class BookService
                 Id = 4,
                 Name = "To the Lighthouse",
                 Author = "Virginia Woolf",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/81Sz9bIn3kL.jpg",
+                ImageUri = "/assets/covers/to_the_lighthouse.jpg",
                 Price = 18.75,
                 FreeDelivery = true,
                 CreationDate = DateTime.Now
@@ -53,7 +53,7 @@ public class BookService
                 Id = 5,
                 Name = "The Catcher in the Rye",
                 Author = "J.D. Salinger",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/81h2gWPTYJL.jpg",
+                ImageUri = "/assets/covers/the_catcher_in_the_rye.jpg",
                 Price = 20.50,
                 FreeDelivery = false,
                 CreationDate = DateTime.Now
@@ -63,7 +63,7 @@ public class BookService
                 Id = 6,
                 Name = "The Hobbit",
                 Author = "J.R.R. Tolkien",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/91n6KmXMTYL.jpg",
+                ImageUri = "/assets/covers/the_hobbit.jpg",
                 Price = 30.00,
                 FreeDelivery = true,
                 CreationDate = DateTime.Now
@@ -73,7 +73,7 @@ public class BookService
                 Id = 7,
                 Name = "Pride and Prejudice",
                 Author = "Jane Austen",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/71BHh9fROXL.jpg",
+                ImageUri = "/assets/covers/pride_and_prejudice.jpg",
                 Price = 24.99,
                 FreeDelivery = true,
                 CreationDate = DateTime.Now
@@ -83,7 +83,7 @@ public class BookService
                 Id = 8,
                 Name = "The Shining",
                 Author = "Stephen King",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/81Gwpz8-7lL.jpg",
+                ImageUri = "/assets/covers/the_shining.jpg",
                 Price = 27.50,
                 FreeDelivery = false,
                 CreationDate = DateTime.Now
@@ -93,7 +93,7 @@ public class BookService
                 Id = 9,
                 Name = "Brave New World",
                 Author = "Aldous Huxley",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/81+j0JdJt-L.jpg",
+                ImageUri = "/assets/covers/brave_new_world.jpg",
                 Price = 23.99,
                 FreeDelivery = true,
                 CreationDate = DateTime.Now
@@ -103,7 +103,7 @@ public class BookService
                 Id = 10,
                 Name = "The Road",
                 Author = "Cormac McCarthy",
-                ImageUri = "https://images-na.ssl-images-amazon.com/images/I/81b-MvG-9-L.jpg",
+                ImageUri = "/assets/covers/the_road.jpg",
                 Price = 21.75,
                 FreeDelivery = false,
                 CreationDate = DateTime.Now

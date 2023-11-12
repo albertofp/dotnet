@@ -16,11 +16,12 @@ public class Book
     public string ImageUri { get; set; }
    
     [Display(Name = "Preço")]
-    [DisplayFormat(DataFormatString = "{0:C}")]
+    [DataType(DataType.Currency)]
     public double Price { get; set; }
     
     [Display(Name = "Entrega grátis")]
     public bool FreeDelivery { get; set; }
+    public string FreeDeliveryDisplay => FreeDelivery ? "Sim" : "Não";
     
     [DisplayFormat(DataFormatString = "{0:D}")]
     [Display(Name = "Disponível desde")]

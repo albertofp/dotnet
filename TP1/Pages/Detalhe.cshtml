@@ -2,17 +2,17 @@
 @model TP1.Pages.Detalhe
 
 <h2 class="my-3">@Model.Book.Name</h2>
+<h3 class="my-3">@Model.Book.Author</h3>
 <div class="row">
     <div class="col-4">
         <img class="img-fluid rounded" src="@Model.Book.ImageUri">
     </div>
     <div class="col-6">
-        <h4 class="my-3">@Model.Book.Author</h4>
         <ul>
             <li><label asp-for="Book.Price"></label>: R$@Model.Book.Price</li>
-            <li><label asp-for="Book.FreeDelivery"></label>: @Model.Book.FreeDelivery</li>
+            <li><label asp-for="Book.FreeDelivery"></label>: @Model.Book.FreeDeliveryDisplay</li>
             <li><label asp-for="Book.CreationDate"></label>: @Model.Book.CreationDate</li>
         </ul>
         <a class="btn my-3 btn-primary">Editar</a>
     </div>
-</div>>
+</div>
