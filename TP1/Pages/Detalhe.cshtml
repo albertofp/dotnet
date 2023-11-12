@@ -1,4 +1,4 @@
-@page
+@page "/book/{slug}/{id}"
 @model TP1.Pages.Detalhe
 
 <h2 class="my-3">@Model.Book.Name</h2>
@@ -9,9 +9,9 @@
     </div>
     <div class="col-6">
         <ul>
-            <li><label asp-for="Book.Price"></label>: R$@Model.Book.Price</li>
+            <li><label asp-for="Book.Price"></label>: @Html.DisplayFor(model => model.Book.Price)</li>
             <li><label asp-for="Book.FreeDelivery"></label>: @Model.Book.FreeDeliveryDisplay</li>
-            <li><label asp-for="Book.CreationDate"></label>: @Model.Book.CreationDate</li>
+            <li><label asp-for="Book.CreationDate"></label>: @Html.DisplayFor(model => model.Book.CreationDate)</li>
         </ul>
         <a class="btn my-3 btn-primary">Editar</a>
     </div>

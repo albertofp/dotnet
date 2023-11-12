@@ -7,8 +7,10 @@ public class Book
 {
     public int Id { get; set; }
     
-    [Display(Name = "Nome")]
-    public string Name { get; set; } 
+    [Display(Name = "Título")]
+    public string Name { get; set; }
+
+    public string NameSlug => Name.ToLower().Replace(" ", "-");
     
     [Display(Name = "Autor")]
     public string Author { get; set; }
