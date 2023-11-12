@@ -1,5 +1,4 @@
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 builder.Services.AddRazorPages();
 
@@ -14,6 +13,7 @@ if (!app.Environment.IsDevelopment())
   app.UseHsts();
 }
 
+app.UseRequestLocalization("pt-BR");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
