@@ -1,0 +1,24 @@
+@page "/adicionar"
+@model TP1.Pages.Adicionar
+
+<div class="row pt-5">
+    <div class="col-md-4">
+        <form method="post">
+            <h4>Adicionar Livro</h4>
+            <hr/>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Book.Name" class="control-label"></label>
+                <input asp-for="Book.Name" class="form-control"/>
+                <span asp-validation-for="Book.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3 mb-3">
+                <input class="form-check-input" asp-for=""/>
+                <label asp-for=""></label>
+            </div>
+            <div class="form-group mt-4">
+                <input type="submit" value="Salvar" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
