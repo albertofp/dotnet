@@ -19,6 +19,8 @@ public class Book
     [Display(Name = "Autor")]
     public string Author { get; set; }
     
+    [Required(ErrorMessage = "Campo 'Link Capa' obrigatório.")]
+    [Display(Name = "Link Capa")]
     public string ImageUri { get; set; }
    
     [Display(Name = "Preço")]
@@ -30,8 +32,9 @@ public class Book
     public bool FreeDelivery { get; set; }
     public string FreeDeliveryDisplay => FreeDelivery ? "Sim" : "Não";
     
-    [DisplayFormat(DataFormatString = "{0:D}")]
+    [DisplayFormat(DataFormatString = "{0:MMMM \\de yyyy}")]
     [Required(ErrorMessage = "Campo 'Disponível em' obrigatório.")]
-    [Display(Name = "Disponível desde")]
+    [DataType("month", ErrorMessage = "Obrigatório")]
+    [Display(Name = "Disponível em")]
     public DateTime CreationDate { get; set; }
 }
