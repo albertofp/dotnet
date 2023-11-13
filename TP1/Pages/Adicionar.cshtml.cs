@@ -21,11 +21,6 @@ public class Adicionar : PageModel
 
     public IActionResult OnPost()
     {
-        if (!ModelState.IsValid)
-        {
-            return Page();
-        }
-        
         _service.Create(Book);
         _toastNotification.AddSuccessToastMessage("Livro adicionado com sucesso.");
         return RedirectToPage("/Index");
