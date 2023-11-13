@@ -140,4 +140,9 @@ public class BookService : IBookService
         selectedBook.ImageUri = book.ImageUri;
         selectedBook.CreationDate = book.CreationDate;
     }
+
+    public void Delete(string id)
+    {
+        _books.Remove(Get(id));
+    }
 }

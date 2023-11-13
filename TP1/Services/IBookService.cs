@@ -8,4 +8,5 @@ public interface IBookService
    Book Get(string id);
    void Create(Book book);
    void Edit(Book book);
+   void Delete(string id);
 }

@@ -32,4 +32,11 @@ public class Editar : PageModel
         _toastNotification.AddSuccessToastMessage("Livro editado com sucesso.");
         return RedirectToPage("/Index");
     }
+
+    public IActionResult OnPostDelete()
+    {
+        _service.Delete(Book.Id);
+        _toastNotification.AddSuccessToastMessage("Livro deletado com sucesso.");
+        return RedirectToPage("/Index");
+    }
 }
