@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="shortid" Version="4.0.0" />
+  </ItemGroup>
+
 </Project>

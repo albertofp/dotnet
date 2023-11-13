@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TP1.Models;
 using TP1.Services;
@@ -6,11 +7,22 @@ namespace TP1.Pages;
 
 public class Detalhe : PageModel
 {
-    public Book Book { get; set; }
+    private IBookService _service;
 
-    public void OnGet(int id)
+    public Detalhe(IBookService bookService)
     {
-        var bookService = new BookService();
-        Book = bookService.Get(id);
+        _service = bookService;
+    }
+    public Book? Book { get; set; }
+
+    public IActionResult OnGet(string id)
+    {
+        Book = _service.Get(id);
+
+        if (Book == null)
+        {
+            return NotFound();
+        }
+        return Page();
     }
 }

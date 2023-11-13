@@ -5,7 +5,7 @@ namespace TP1.Models;
 
 public class Book
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
     
     [Display(Name = "Título")]
     [Required(AllowEmptyStrings = false, ErrorMessage = "Campo 'Título' obrigatório.")]

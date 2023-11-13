@@ -16,6 +16,6 @@ public class Adicionar : PageModel
             return Page();
         }
 
-        return RedirectToPage("Index");
+        return RedirectToPage("/Index");
     }
 }

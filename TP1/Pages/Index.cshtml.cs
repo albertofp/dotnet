@@ -6,13 +6,17 @@ namespace TP1.Pages;
 
 public class IndexModel : PageModel
 {
-    public IList<Book> Books { get; private set; }
+    private IBookService _service;
+    public IndexModel(IBookService bookService)
+    {
+        _service = bookService;
+    }
+    
+    public IList<Book>? Books { get; private set; }
 
     public void OnGet()
     {
         ViewData["Title"] = "Home Page";
-
-        var bookService = new BookService();
-        Books = bookService.GetAll();
+        Books = _service.GetAll();
     }
 }
