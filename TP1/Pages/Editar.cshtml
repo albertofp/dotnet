@@ -1,0 +1,54 @@
+@page "/editar"
+@model TP1.Pages.Editar
+
+<div class="row pt-5">
+    <div class="col-md-4">
+        <form method="post">
+            <h4>Editar Livro</h4>
+            <hr/>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <input type="hidden" aria-hidden="true" asp-for="Book.Id"/>
+            
+            <div class="form-group">
+                <label asp-for="Book.Name" class="control-label"></label>
+                <input asp-for="Book.Name" class="form-control"/>
+                <span asp-validation-for="Book.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.Author" class="control-label"></label>
+                <input asp-for="Book.Author" class="form-control"/>
+                <span asp-validation-for="Book.Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.ImageUri" class="control-label"></label>
+                <input asp-for="Book.ImageUri" class="form-control"/>
+                <span asp-validation-for="Book.ImageUri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.Price" class="control-label"></label>
+                <input asp-for="Book.Price" class="form-control"/>
+                <span asp-validation-for="Book.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.CreationDate" class="control-label"></label>
+                <input asp-for="Book.CreationDate" class="form-control"/>
+                <span asp-validation-for="Book.CreationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3 mb-3">
+                <input class="form-check-input" asp-for="Book.FreeDelivery"/>
+                <label asp-for="Book.FreeDelivery"></label>
+            </div>
+            <div class="form-group mt-4">
+                <input type="submit" value="Salvar" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("Shared/_ValidationScriptsPartial");
+    }
+}

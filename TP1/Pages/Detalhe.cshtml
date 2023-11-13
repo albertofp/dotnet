@@ -11,6 +11,6 @@
         <h4><label asp-for="Book.Price"></label>: @Html.DisplayFor(model => model.Book.Price)</h4>
         <h5><label asp-for="Book.FreeDelivery"></label>: @Model.Book.FreeDeliveryDisplay</h5>
         <h5><label asp-for="Book.CreationDate"></label>: @Html.DisplayFor(model => model.Book.CreationDate)</h5>
-        <a class="btn my-3 btn-primary">Editar</a>
+        <a class="btn my-3 btn-primary" asp-page="Editar" asp-route-id="@Model.Book.Id">Editar</a>
     </div>
 </div>

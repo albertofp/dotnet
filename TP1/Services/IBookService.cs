@@ -7,4 +7,5 @@ public interface IBookService
    IList<Book> GetAll();
    Book Get(string id);
    void Create(Book book);
+   void Edit(Book book);
 }

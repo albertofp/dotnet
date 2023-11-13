@@ -129,4 +129,15 @@ public class BookService : IBookService
         book.Id = ShortId.Generate();
         _books.Add(book);
     }
+
+    public void Edit(Book book)
+    {
+        var selectedBook = Get(book.Id);
+        selectedBook.Name = book.Name;
+        selectedBook.Author = book.Author;
+        selectedBook.FreeDelivery = book.FreeDelivery;
+        selectedBook.Price = book.Price;
+        selectedBook.ImageUri = book.ImageUri;
+        selectedBook.CreationDate = book.CreationDate;
+    }
 }
