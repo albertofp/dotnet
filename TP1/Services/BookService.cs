@@ -44,10 +44,13 @@ public class BookService : IBookService
     public void Delete(string id)
     {
         var bookToDelete = _context.Books.Find(id);
-        if (bookToDelete != null)
-        {
-            _context.Books.Remove(bookToDelete);
-            _context.SaveChanges();
-        }
+        if (bookToDelete == null) return;
+        
+        _context.Books.Remove(bookToDelete);
+        _context.SaveChanges();
     }
+
+    public IList<Genre> GetGenres() => _context.Genres.ToList();
+    
+    public Genre GetGenreById(string genreId) => _context.Genres.FirstOrDefault(g => g.GenreID == genreId) ?? throw new InvalidOperationException();
 }

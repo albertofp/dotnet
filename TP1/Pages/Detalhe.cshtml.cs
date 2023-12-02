@@ -14,7 +14,10 @@ public class Detalhe : PageModel
         _service = bookService;
     }
     public Book? Book { get; set; }
-
+    
+    [BindProperty]
+    public Genre Genre { get; set; }
+    
     public IActionResult OnGet(string id)
     {
         Book = _service.Get(id);
@@ -23,6 +26,7 @@ public class Detalhe : PageModel
         {
             return NotFound();
         }
+        Genre = _service.GetGenreById(Book.GenreID);
         return Page();
     }
 }

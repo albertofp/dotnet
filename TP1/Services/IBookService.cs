@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TP1.Models;
 
@@ -10,4 +11,6 @@ public interface IBookService
    void Create(Book book);
    void Edit(Book book);
    void Delete(string id);
+   IList<Genre> GetGenres();
+   Genre GetGenreById(string genreId);
 }

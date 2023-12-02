@@ -18,15 +18,20 @@ public class Editar : PageModel
     
     [BindProperty]
     public Book Book { get; set; }
+    
+    [BindProperty]
+    public List<Genre> Genres { get; set; }
 
-    public void OnGet(string id) => Book = _service.Get(id);
+    public void OnGet(string id)
+    {
+        Book = _service.Get(id);
+        Genres = _service.GetGenres().ToList();
+    }
 
     public IActionResult OnPost()
     {
-        if (!ModelState.IsValid)
-        {
-            return Page();
-        }
+        var selectedGenre = _service.GetGenreById(Book.GenreID);
+        Book.Genre = selectedGenre;
         
         _service.Edit(Book);
         _toastNotification.AddSuccessToastMessage("Livro editado com sucesso.");
