@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using TP1.Models;
 using TP1.Services;
 

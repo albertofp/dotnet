@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -48,10 +50,8 @@ public class BooksContext : DbContext
     public DbSet<Genre> Genres { get; set; }
     public string DbPath { get; }
 
-    public BooksContext(DbSet<Book> books, DbSet<Genre> genres)
+    public BooksContext(DbContextOptions<BooksContext> options) : base(options)
     {
-        Books = books;
-        Genres = genres;
         DbPath = "books.db";
     }
 
@@ -66,5 +66,5 @@ public class Genre
     public List<Book> Books { get; } = new();
 
     public string GenreString { get; set; }
-    public string GenreID { get; set; }
+    public string GenreId { get; set; }
 }
