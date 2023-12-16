@@ -24,4 +24,9 @@
     <PackageReference Include="shortid" Version="4.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Models\BooksContext.cs" />
+    <Compile Remove="Models\ModelSeedData.cs" />
+  </ItemGroup>
+
 </Project>

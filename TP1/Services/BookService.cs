@@ -9,7 +9,6 @@ namespace TP1.Services;
 
 public class BookService : IBookService
 {
-    private IList<Book> _books;
     private readonly BooksContext _context;
 
     public BookService(BooksContext context) => _context = context;
