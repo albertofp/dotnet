@@ -14,6 +14,19 @@ builder.Services.AddDbContext<BooksContext>(options =>
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<BooksContext>();
 
+builder.Services.Configure<IdentityOptions>(options => {
+  options.Password.RequireDigit = false;
+  options.Password.RequireLowercase = false;
+  options.Password.RequireNonAlphanumeric = false;
+  options.Password.RequireUppercase = false;
+  options.Password.RequiredLength = 3;
+// Lockout settings
+  options.Lockout.MaxFailedAccessAttempts = 30;
+  options.Lockout.AllowedForNewUsers = true;
+// User settings
+  options.User.RequireUniqueEmail = true;
+});
+
 builder.Services.AddMvc().AddNToastNotifyToastr();
 var app = builder.Build();
 
