@@ -5,7 +5,5 @@ namespace TP1.Models;
 public class ApplicationUser : IdentityUser
 {
     [PersonalData]
-    public override string Email { get; set; }
-    [PersonalData]
-    public string Password { get; set; }
+    public string Email { get; set; }
 }

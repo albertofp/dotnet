@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NToastNotify;
@@ -6,6 +7,7 @@ using TP1.Services;
 
 namespace TP1.Pages;
 
+[Authorize]
 public class Editar : PageModel
 {
     private IBookService _service;

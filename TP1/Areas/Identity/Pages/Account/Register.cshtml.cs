@@ -159,7 +159,7 @@ namespace TP1.Areas.Identity.Pages.Account
         {
             try
             {
-                return Activator.CreateInstance<ApplicationUser>();
+                return new ApplicationUser();
             }
             catch
             {
