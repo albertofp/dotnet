@@ -1,9 +1,6 @@
-using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using NToastNotify;
 using TP1.Models;
 using TP1.Services;
 
@@ -15,6 +12,7 @@ builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddDbContext<BooksContext>(options =>
   options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<BooksContext>();
 
 builder.Services.AddMvc().AddNToastNotifyToastr();
 var app = builder.Build();
@@ -33,6 +31,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

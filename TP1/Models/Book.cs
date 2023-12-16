@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace TP1.Models;
@@ -44,7 +45,7 @@ public class Book
     public Genre Genre { get; set; }
 }
 
-public class BooksContext : DbContext
+public class BooksContext : IdentityDbContext<ApplicationUser>
 {
     public DbSet<Book> Books { get; set; }
     public DbSet<Genre> Genres { get; set; }
@@ -59,12 +60,4 @@ public class BooksContext : DbContext
     {
         options.UseSqlite($"Data Source={DbPath}");
     }
-}
-
-public class Genre
-{
-    public List<Book> Books { get; } = new();
-
-    public string GenreString { get; set; }
-    public string GenreID { get; set; }
 }
